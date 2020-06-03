@@ -20,4 +20,4 @@ with open(matrix_fname) as mf:
 for l in mfl:
   l = l.rstrip()
   l = l.split()
-  print abs_dict[l[0]] + "\t" + abs_dict[l[1]] + "\t" + str(l[2])
+  print(abs_dict[l[0]] + "\t" + abs_dict[l[1]] + "\t" + str(l[2]))
