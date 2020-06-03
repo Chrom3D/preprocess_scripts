@@ -9,9 +9,9 @@ with open(gtrack_fname) as gf:
 for line in gtrack_file:
   line=line.rstrip()
   if line.startswith("#"):
-    print line
+    print(line)
   else:
     line1=re.sub(r'(chr\w+)',r'\1_A',line)
     line2=re.sub(r'(chr\w+)',r'\1_B',line)
-    print line1
-    print line2
+    print(line1)
+    print(line2)
