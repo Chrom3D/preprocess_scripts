@@ -32,4 +32,4 @@ for i in range(len(processline)):
   line = processline[i] + " " + str(padj[1][i])
   line  = line.split()
   if(float(line[11]) >= log_ratio and float(line[12]) <= fdr_thres):
-    print line[0] + "\t" + line[1] + "\t" + line[2] + "\t" + line[3] + "\t" + line[4] + "\t" + line[5] + "\t" + line[12] 
+    print(line[0] + "\t" + line[1] + "\t" + line[2] + "\t" + line[3] + "\t" + line[4] + "\t" + line[5] + "\t" + line[12])
