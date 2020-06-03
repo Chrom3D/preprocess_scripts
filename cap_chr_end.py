@@ -14,4 +14,4 @@ for n in sys.stdin:
   if int(n[5]) > chrsize[n[3]]:
     n[5] = chrsize[n[3]] 
   n = map(str,n)
-  print '\t'.join(n) 
+  print('\t'.join(n))
