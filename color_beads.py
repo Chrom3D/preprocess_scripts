@@ -31,7 +31,7 @@ for line in cmm_file:
     cmm_dict[key] = line
 
 if blend == "OVERRIDE": 
-  for k in cmm_dict.iterkeys():
+  for k in cmm_dict.keys():
     if k in id_list:
       cmm_dict[k][6] = "r=\"" + str(rgb_float(rgb_given[0])) + "\""
       cmm_dict[k][7] = "g=\"" + str(rgb_float(rgb_given[1])) + "\""
@@ -41,7 +41,7 @@ if blend == "OVERRIDE":
       cmm_dict[k][7] = "g=\"" + str(rgb_float(105)) + "\""
       cmm_dict[k][8] = "b=\"" + str(rgb_float(105)) + "\""
 elif blend == "BLEND":
-  for k in cmm_dict.iterkeys():
+  for k in cmm_dict.keys():
     if k in id_list:
       ex_r = cmm_dict[k][6].replace("r=","").replace("\"","")
       ex_g = cmm_dict[k][7].replace("g=","").replace("\"","")
@@ -64,6 +64,6 @@ for line in cmm_file:
     line=line.rstrip()
     line=line.split()
     key=line[-1].replace("beadID=","").replace("\"","").replace("/","").replace(">","")
-    print ' '.join(cmm_dict[key])
+    print(' '.join(cmm_dict[key]))
   else:
-    print line.rstrip()
+    print(line.rstrip())
